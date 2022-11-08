@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    height: 992px;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -9,44 +9,45 @@
     transition: all 2s;
 }
 .computer_case{
-    top: 25%;
-    left: 30%;
+    width: 32rem;
+    top: 15rem;
+    left: 23rem;
     z-index: 1;
 }
 .processor{
     width: 3.5rem;
-    top: 38.5%;
-    left: 41.5%;
+    top: 27.75rem;
+    left: 32.3rem;
     z-index: 3;
 }
 .motherboard{
     width: 15rem;
-    top: 35%;
-    left: 34.5%;
+    top: 25.5rem;
+    left: 27rem;
     z-index: 2;
 }
 .video_card{
     width: 10rem;
-    top: 45%;
-    left: 35%;
+    top: 31.5rem;
+    left: 27rem;
     z-index: 4;
 }
 .supply{
     width: 5rem;
-    top: 59%;
-    left: 35%;
+    top: 19rem;
+    left: 27rem;
     z-index: 3;
 }
 .ram{
-    width: 5rem;
-    top: 40%;
-    left: 47%;
+    width: 6.5rem;
+    top: 27.5rem;
+    left: 36.5rem;
     z-index: 3;
 }
 .hdd{
     width: 8rem;
-    top: 35%;
-    left: 56%;
+    top: 21rem;
+    left: 42.5rem;
     z-index: 3;
 }
 .hardware__img {
@@ -128,8 +129,8 @@
 .ram::before {
     border-radius: 5%;
     top: 0%;
-    left: 5%;
-    width: 90%;
+    left: 1.2rem;
+    width: 70%;
     height: 100%;
 }
 .hdd::before {
@@ -145,31 +146,173 @@
 }
 .container:hover .processor{
     width: 5.5rem;
-    top: 15%;
-    left: 30%;
+    top: 7rem;
+    left: 50rem;
 }
 .container:hover .motherboard{
-    width: 15rem;
-    top: 35%;
-    left: 7%;
+    width: 17rem;
+    top: 21.5rem;
+    left: 5rem;
 }
 .container:hover .video_card{
     width: 15rem;
-    top: 75%;
-    left: 20%;
+    top: 45rem;
+    left: 15rem;
 }
 .container:hover .supply{
     width: 7rem;
-    top: 80%;
-    left: 65%;
+    top: 6.5rem;
+    left: 20rem;
 }
 .container:hover .ram{
-    width: 7rem;
-    top: 13%;
-    left: 65%;
+    width: 8rem;
+    top: 47.5rem;
+    left: 50rem;
 }
 .container:hover .hdd{
-    width: 15rem;
-    top: 35%;
-    left: 75%;
+    width: 12rem;
+    top: 23rem;
+    left: 54rem;
+}
+
+
+
+
+@media (max-width:1300px) {
+    .container {
+        max-width: 1024px;
+    }
+    .computer_case{
+        left: 16rem;
+    }
+    .processor{
+        left: 25.3rem;
+    }
+    .motherboard{
+        left: 20rem;
+    }
+    .video_card{
+        left: 20rem;
+    }
+    .supply{
+        left: 20rem;
+    }
+    .ram{
+        left: 29.5rem;
+    }
+    .hdd{
+        left: 35.5rem;
+    }
+    .container:hover .processor{
+        top: 8.5rem;
+        width: 5rem;
+        left: 43rem;
+    }
+    .container:hover .motherboard{
+        width: 15rem;
+        left: 0.4rem;
+    }
+    .container:hover .video_card{
+        width: 12rem;
+        left: 11.4rem;
+    }
+    .container:hover .supply{
+        width: 6rem;
+        top: 8rem;
+        left: 15.4rem;
+    }
+    .container:hover .ram{
+        width: 6rem;
+        top: 46.5rem;
+        left: 43.4rem;
+    }
+    .container:hover .hdd{
+        width: 10rem;
+        top: 23rem;
+        left: 47.7rem;
+    }
+}
+
+@media (max-width:992px) {
+    .hdd{
+        width: 8rem;
+        top: 21rem;
+        left: 42.5rem;
+        z-index: 3;
+    }
+    .container {
+        max-width: 768px;
+    }
+    .computer_case{
+        width: 20rem;
+        top: 10rem;
+        left: 14rem;
+    }
+    .processor{
+        width: 2.18755rem;
+        top: 17.8rem;
+        left: 19.66rem;
+    }
+    .motherboard{
+        width: 9.0625rem;
+        top: 16.5rem;
+        left: 16.5rem;
+    }
+    .video_card{
+        width: 6.25rem;
+        top: 20rem;
+        left: 16rem;
+    }
+    .supply{
+        width: 3.125rem;
+        top: 12.5rem;
+        left: 16.5rem;
+    }
+    .ram{
+        width: 4.0625rem;
+        top: 17.7rem;
+        left: 22.3rem;
+    }
+    .hdd{
+        width: 5rem;
+        top: 13.5rem;
+        left: 26.2rem;
+    }
+
+    .container:hover .processor{
+        width: 3.5rem;
+        top: 6rem;
+        left: 31rem;
+    }
+    .container:hover .motherboard{
+        width: 10rem;
+        top: 14.5rem;
+        left: 4rem;
+    }
+    .container:hover .video_card{
+        width: 7rem;
+        top: 29.5rem;
+        left: 12rem;
+    }
+    .container:hover .supply{
+        width: 3.5rem;
+        top: 6rem;
+        left: 14em;
+    }
+    .container:hover .ram{
+        width: 4.2rem;
+        top: 30rem;
+        left: 31rem;
+    }
+    .container:hover .hdd{
+        width: 6rem;
+        top: 16rem;
+        left: 33rem;
+    }
+
+
+}
+
+@media (max-width:767px) {
+
 }

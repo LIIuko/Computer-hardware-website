@@ -1,0 +1,39 @@
+img{
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+}
+.intel{
+    height: 100vh;
+    background: url(/img/processor/intel.png);
+}
+.title_h2{
+    font-size: 2rem;
+    margin: 1rem auto 3rem auto;
+}
+.container {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+p{
+    margin: 1rem 0;
+}
+.img{
+    align-self: center;
+    width: 30rem;
+}
+.block__container{
+    align-self: center;
+    margin: 2rem;
+    flex: 1 1 45%;
+}
+
+.amd{
+    background: url(/img/processor/amd_2.jpg);
+    height: 100vh;
+}

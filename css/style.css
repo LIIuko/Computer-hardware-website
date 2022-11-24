@@ -75,6 +75,7 @@ ul li {
 }
 
 img {
+    width: 100%;
     vertical-align: top;
 }
 
@@ -91,4 +92,19 @@ h6 {
 body{
     color: white;
     background-color: rgb(54, 52, 52);
+}
+
+
+p{
+    margin: 1rem 0;
+}
+
+.title_h2{
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 1rem auto 3rem auto;
+}
+.title_h3{
+    font-size: 2rem;
+    margin: 1rem auto 3rem auto;
 }

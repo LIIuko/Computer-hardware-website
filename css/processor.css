@@ -1,39 +1,78 @@
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 .main{
-    width: 100%;
-}
-.intel{
-    height: 100vh;
-    background: url(/img/processor/intel.png);
+    background-position: center;
 }
 .title_h2{
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 1rem auto 3rem auto;
+}
+.title_h3{
     font-size: 2rem;
     margin: 1rem auto 3rem auto;
 }
 .container {
-    display: flex;
     font-size: 1.5rem;
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
+.description{
+    display: flex;
+}
+.description__elem{
+    margin: 0 2rem;
+    flex: 1 1 45%;
+}
 p{
     margin: 1rem 0;
 }
-.img{
-    align-self: center;
-    width: 30rem;
+
+.intel{
+    background-color: rgb(47, 47, 189);
 }
-.block__container{
-    align-self: center;
-    margin: 2rem;
+.amd{
+    background-color: rgb(158, 45, 45);
+}
+
+.right{
+    float: right;
+    width: 50%;
+}
+
+.broken__container{
+    display: flex;
+}
+.container__position{
+    margin: 1rem;
     flex: 1 1 45%;
 }
 
-.amd{
-    background: url(/img/processor/amd_2.jpg);
-    height: 100vh;
+@media (max-width:992px) {
+    .container {
+        max-width: none;
+    }
+    .broken__container{
+        display: block;
+    }
+    .container__position{
+        flex: none;
+        margin: 0;
+    }
+    .broken__left{
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (max-width:767px) {
+    .broken__left{
+        float: none;
+        width: 100%;
+        margin:0 0 1rem 0;
+    }
+
 }

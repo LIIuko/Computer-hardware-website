@@ -11,6 +11,7 @@ img{
 
 .broken__container{
     display: flex;
+    flex-direction: row-reverse;
 }
 .container__position{
     margin: 0 1rem;

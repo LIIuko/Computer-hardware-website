@@ -2,23 +2,11 @@ img{
     max-width: 100%;
 }
 
-.container {
-    font-size: 1.5rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .intel{
     background-color: rgb(47, 47, 189);
 }
 .amd{
     background-color: rgb(158, 45, 45);
-}
-
-.right{
-    float: right;
-    width: 30%;
 }
 
 .broken__container{
@@ -46,11 +34,6 @@ img{
     }
     .container__position__logo{
         transform: translateY(0);
-        width: 70%;
-        margin: 0 auto;
-    }
-    .right{
-        float: none;
         width: 70%;
         margin: 0 auto;
     }

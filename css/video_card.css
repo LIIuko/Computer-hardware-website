@@ -1,25 +1,6 @@
-.container {
-    font-size: 1.5rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .nvidia{
     background-color: #77b900;
 }
 .amd{
     background-color: rgb(158, 45, 45);
-}
-.right{
-    float: right;
-    width: 30%;
-}
-
-@media (max-width:992px) {
-    .right{
-        float: none;
-        width: 70%;
-        margin: 0 auto;
-    }
 }

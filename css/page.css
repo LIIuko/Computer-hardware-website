@@ -59,6 +59,7 @@ img{
     padding: 0.5rem;
     border-radius: 0.5rem;
     background-color: cornflowerblue;
+    margin-bottom: 2rem;
 }
 .card__decription{
     width: 100%;
@@ -70,10 +71,11 @@ img{
     opacity: 0;
     z-index: 10;
 }
-.card:hover .card__decription{
+.card__decription{
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    opacity: 1;
+    display: none;
+    opacity: 0;
 }
 
 @media (max-width:1200px) {

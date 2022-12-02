@@ -31,12 +31,7 @@ export function create(array, productContainer) {
         productTitle.classList.add("product__title");
         productTitle.classList.add("title");
         productTitle.textContent = el.title;
-
-        let price = document.createElement("span");
-        price.classList.add("price");
-        price.textContent = el.price + " ₽";
-
-        mainContent.prepend(price);
+        
         mainContent.prepend(productTitle);
         mainContent.prepend(productImg);
 

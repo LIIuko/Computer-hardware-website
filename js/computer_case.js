@@ -3,7 +3,6 @@ import { create } from "./script.js";
 const product = {
     img: ["/img/computer_case.png", "/img/computer_case/computer_case2.png", "/img/computer_case/computer_case3.png", "/img/computer_case/computer_case4.png", "/img/computer_case/computer_case5.png"],
     title: "Title",
-    price: 100,
     about: "#",
 };
 const productContainer = document.querySelector(".product__container");

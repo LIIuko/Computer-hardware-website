@@ -3,8 +3,7 @@ import { create } from "./script.js";
 const product = {
     img: ["/img/motherboard.png", "/img/motherboard/motherboard2.png", "/img/motherboard/motherboard3.png", "/img/motherboard/motherboard4.png"],
     title: "Title",
-    price: 100,
-    about: "#",
+    about: "/pages/about_motherboard.html",
 };
 const productContainer = document.querySelector(".product__container");
 

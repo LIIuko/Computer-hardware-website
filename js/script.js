@@ -1,5 +1,9 @@
 export function create(array, productContainer) {
     for (let el of array) {
+        let link = document.createElement("a");
+        link.classList.add("link");
+        link.href = el.about;
+
         let card = document.createElement("div");
         card.classList.add("card");
 
@@ -30,14 +34,8 @@ export function create(array, productContainer) {
 
         let price = document.createElement("span");
         price.classList.add("price");
-        price.textContent = el.price;
+        price.textContent = el.price + " ₽";
 
-        let productAbout = document.createElement("a");
-        productAbout.classList.add("product__about");
-        productAbout.href = el.about;
-        productAbout.textContent = "Подробнее";
-
-        mainContent.prepend(productAbout);
         mainContent.prepend(price);
         mainContent.prepend(productTitle);
         mainContent.prepend(productImg);
@@ -45,7 +43,7 @@ export function create(array, productContainer) {
         cardContent.prepend(mainContent);
 
         card.prepend(cardContent);
-
-        productContainer.append(card);
+        link.append(card);
+        productContainer.append(link);
     }
 }

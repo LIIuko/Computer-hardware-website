@@ -9,7 +9,7 @@ const product = {
 const productContainer = document.querySelector(".product__container");
 
 let processors = [];
-for (let i = 0; i < 20; i++){
+for (let i = 0; i < 20; i++) {
     processors.push(product);
 }
 

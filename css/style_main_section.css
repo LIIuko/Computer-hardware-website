@@ -4,52 +4,61 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .container__img {
     position: absolute;
     transition: all 2s;
 }
-.computer_case{
+
+.computer_case {
     width: 32rem;
     top: 15rem;
     left: 23rem;
     z-index: 1;
 }
-.processor{
+
+.processor {
     width: 3.5rem;
     top: 27.75rem;
     left: 32.3rem;
     z-index: 3;
 }
-.motherboard{
+
+.motherboard {
     width: 15rem;
     top: 25.5rem;
     left: 27rem;
     z-index: 2;
 }
-.video_card{
+
+.video_card {
     width: 10rem;
     top: 31.5rem;
     left: 27rem;
     z-index: 4;
 }
-.supply{
+
+.supply {
     width: 5rem;
     top: 19rem;
     left: 27rem;
     z-index: 3;
 }
-.ram{
+
+.ram {
     width: 6.5rem;
     top: 27.5rem;
     left: 36.5rem;
     z-index: 3;
 }
-.hdd{
+
+.hdd {
     width: 8rem;
     top: 21rem;
     left: 42.5rem;
     z-index: 3;
 }
+
 .hardware__img {
     position: relative;
     width: 100%;
@@ -73,26 +82,30 @@
     opacity: 0;
     transition: all 2s;
 }
-.container__img:hover::before{
+
+.container__img:hover::before {
     opacity: 1;
     transition: all 2s;
     animation: pulsar_background 6s linear infinite;
 }
 
 @keyframes pulsar_background {
-    0%{
+    0% {
         transform: scale(1);
         filter: blur(15px);
     }
-    33.33%{
+
+    33.33% {
         transform: scale(0.95);
         filter: blur(10px);
     }
-    66.66%{
+
+    66.66% {
         transform: scale(1.02);
         filter: blur(20px);
     }
-    100%{
+
+    100% {
         transform: scale(1);
         filter: blur(15px);
     }
@@ -105,6 +118,7 @@
     width: 90%;
     height: 90%;
 }
+
 .processor::before {
     border-radius: 5%;
     top: 0;
@@ -112,6 +126,7 @@
     width: 100%;
     height: 100%;
 }
+
 .motherboard::before {
     border-radius: 5%;
     top: 0;
@@ -119,6 +134,7 @@
     width: 100%;
     height: 100%;
 }
+
 .video_card::before {
     border-radius: 5%;
     top: 12%;
@@ -126,6 +142,7 @@
     width: 100%;
     height: 65%;
 }
+
 .ram::before {
     border-radius: 5%;
     top: 0%;
@@ -133,6 +150,7 @@
     width: 70%;
     height: 100%;
 }
+
 .hdd::before {
     border-radius: 5%;
     top: 0%;
@@ -141,92 +159,109 @@
     height: 100%;
 }
 
-.container:hover .container__img{
+.container:hover .container__img {
     transition: all 2s;
 }
-.container:hover .processor{
+
+.container:hover .processor {
     width: 5.5rem;
     top: 7rem;
     left: 50rem;
 }
-.container:hover .motherboard{
+
+.container:hover .motherboard {
     width: 17rem;
     top: 21.5rem;
     left: 5rem;
 }
-.container:hover .video_card{
+
+.container:hover .video_card {
     width: 15rem;
     top: 45rem;
     left: 15rem;
 }
-.container:hover .supply{
+
+.container:hover .supply {
     width: 7rem;
     top: 6.5rem;
     left: 20rem;
 }
-.container:hover .ram{
+
+.container:hover .ram {
     width: 8rem;
     top: 47.5rem;
     left: 50rem;
 }
-.container:hover .hdd{
+
+.container:hover .hdd {
     width: 12rem;
     top: 23rem;
     left: 54rem;
 }
 
 
-
-
 @media (max-width:1300px) {
     .container {
         max-width: 1024px;
     }
-    .computer_case{
+
+    .computer_case {
         left: 16rem;
     }
-    .processor{
+
+    .processor {
         left: 25.3rem;
     }
-    .motherboard{
+
+    .motherboard {
         left: 20rem;
     }
-    .video_card{
+
+    .video_card {
         left: 20rem;
     }
-    .supply{
+
+    .supply {
         left: 20rem;
     }
-    .ram{
+
+    .ram {
         left: 29.5rem;
     }
-    .hdd{
+
+    .hdd {
         left: 35.5rem;
     }
-    .container:hover .processor{
+
+    .container:hover .processor {
         top: 8.5rem;
         width: 5rem;
         left: 43rem;
     }
-    .container:hover .motherboard{
+
+    .container:hover .motherboard {
         width: 15rem;
         left: 0.4rem;
     }
-    .container:hover .video_card{
+
+    .container:hover .video_card {
         width: 12rem;
         left: 11.4rem;
     }
-    .container:hover .supply{
+
+    .container:hover .supply {
         width: 6rem;
         top: 8rem;
         left: 15.4rem;
     }
-    .container:hover .ram{
+
+    .container:hover .ram {
         width: 6rem;
         top: 46.5rem;
         left: 43.4rem;
     }
-    .container:hover .hdd{
+
+    .container:hover .hdd {
         width: 10rem;
         top: 23rem;
         left: 47.7rem;
@@ -234,83 +269,159 @@
 }
 
 @media (max-width:992px) {
-    .hdd{
+    .container {
+        max-width: 768px;
+        height: 700px;
+    }
+
+    .hdd {
         width: 8rem;
         top: 21rem;
         left: 42.5rem;
         z-index: 3;
     }
-    .container {
-        max-width: 768px;
-    }
-    .computer_case{
+
+    .computer_case {
         width: 20rem;
         top: 10rem;
         left: 14rem;
     }
-    .processor{
+
+    .processor {
         width: 2.18755rem;
         top: 17.8rem;
         left: 19.66rem;
     }
-    .motherboard{
+
+    .motherboard {
         width: 9.0625rem;
         top: 16.5rem;
         left: 16.5rem;
     }
-    .video_card{
+
+    .video_card {
         width: 6.25rem;
         top: 20rem;
         left: 16rem;
     }
-    .supply{
+
+    .supply {
         width: 3.125rem;
         top: 12.5rem;
         left: 16.5rem;
     }
-    .ram{
+
+    .ram {
         width: 4.0625rem;
         top: 17.7rem;
         left: 22.3rem;
     }
-    .hdd{
+
+    .hdd {
         width: 5rem;
         top: 13.5rem;
         left: 26.2rem;
     }
 
-    .container:hover .processor{
+    .container:hover .processor {
         width: 3.5rem;
         top: 6rem;
         left: 31rem;
     }
-    .container:hover .motherboard{
+
+    .container:hover .motherboard {
         width: 10rem;
         top: 14.5rem;
         left: 4rem;
     }
-    .container:hover .video_card{
+
+    .container:hover .video_card {
         width: 7rem;
         top: 29.5rem;
         left: 12rem;
     }
-    .container:hover .supply{
+
+    .container:hover .supply {
         width: 3.5rem;
         top: 6rem;
         left: 14em;
     }
-    .container:hover .ram{
+
+    .container:hover .ram {
         width: 4.2rem;
         top: 30rem;
         left: 31rem;
     }
-    .container:hover .hdd{
+
+    .container:hover .hdd {
         width: 6rem;
         top: 16rem;
         left: 33rem;
     }
 }
 
-@media (max-width:767px) {
 
+.item__text {
+    display: none;
+}
+
+@media (max-width:767px) {
+    .container {
+        height: 100%;
+        margin: 2rem 1rem;
+    }
+
+    .container__img {
+        position: static;
+        transition: none;
+        flex: 1 1 25%;
+    }
+
+    .computer_case,
+    .processor,
+    .motherboard,
+    .video_card,
+    .supply,
+    .ram,
+    .hdd {
+        width: 100%;
+        height: auto;
+        top: none;
+        left: none;
+        z-index: none;
+    }
+
+    .container:hover .processor,
+    .container:hover .motherboard,
+    .container:hover .video_card,
+    .container:hover .supply,
+    .container:hover .ram,
+    .container:hover .hdd {
+        width: 100%;
+        height: auto;
+        top: none;
+        left: none;
+    }
+
+    .hardware__img {
+        position: static;
+    }
+
+    .container__img::before,
+    .container__img:hover::before {
+        display: none;
+    }
+
+    .item__list {
+        margin: 1rem 0;
+        display: flex;
+    }
+
+    .item__text {
+        flex: 1 1 75%;
+        padding: 2rem;
+        display: block;
+        align-self: center;
+        color: white;
+    }
 }

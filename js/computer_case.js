@@ -1,8 +1,7 @@
 import { create } from "./script.js";
 
 const product = {
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, sed.",
-    img: "/img/computer_case.png",
+    img: ["/img/computer_case.png", "/img/computer_case/computer_case2.png", "/img/computer_case/computer_case3.png", "/img/computer_case/computer_case4.png", "/img/computer_case/computer_case5.png"],
     title: "Title",
     price: 100,
     about: "#",

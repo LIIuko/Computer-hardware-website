@@ -1,4 +1,5 @@
 import { create } from "./script.js";
+import { createImgBlock } from "./script.js";
 
 const product = {
     img: ["/img/processor.png", "/img/processor/processor2.png", "/img/processor/processor3.png", "/img/processor/processor4.png", "/img/processor/processor5.png"],

@@ -113,13 +113,16 @@
         display: flex;
         overflow: hidden;
         justify-content: start;
+        flex: none;
     }
     .main__slide{
         width: 100%;
         height: 100%;
     }
     .slide{
+        flex: none;
         width: 100%;
         height: 100%;
+        cursor: auto
     }
 }

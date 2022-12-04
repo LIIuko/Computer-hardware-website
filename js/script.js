@@ -73,3 +73,90 @@ export function createImgBlock(el){
     containerImg.prepend(containerPointers);
     return containerImg;
 }
+
+export function createSlider(imgs, slider){
+    const mainSlide = document.querySelector(".main__slide");
+    let count = window.innerWidth > 1300 ? 5: 4;
+    let countOffset = 0;
+    let offset = window.innerWidth > 1300 ? 5.5: 5.4;
+    offset = window.innerWidth > 992 ? offset: 4.5;
+    if(window.innerWidth > 768){
+        let containerslider = document.createElement("div");
+        containerslider.classList.add("container__slider");
+
+        for(let img of imgs){
+            let slide = document.createElement("img");
+            slide.classList.add("slide");
+            slide.src = img;
+            slide.addEventListener("click", event => {
+                mainSlide.src = slide.src;
+            });
+            containerslider.append(slide);
+        }
+        for(let img of imgs){
+            let slide = document.createElement("img");
+            slide.classList.add("slide");
+            slide.src = img;
+            slide.addEventListener("click", event => {
+                mainSlide.src = slide.src;
+            });
+            containerslider.append(slide);
+        }
+
+        let prevBttn = document.createElement("img");
+        prevBttn.classList.add("button");
+        prevBttn.classList.add("prev__img");
+        prevBttn.src = "/img/next.png";
+        if(containerslider.children.length - 2 - countOffset <= count * 2){
+            prevBttn.style.display = "none";
+        }
+
+        prevBttn.addEventListener("click", event => {
+            if(containerslider.children.length - 2 - countOffset > count * 2 + 1){
+                nextBttn.style.display = "block";
+            }
+            else{
+                nextBttn.style.display = "block";
+                prevBttn.style.display = "none";
+            }
+            if(containerslider.children.length - 2 - countOffset > count * 2){
+                nextBttn.style.display = "block";
+                countOffset++;
+                for(let el of containerslider.children){
+                    if(el.classList.contains("button")){continue}
+                    el.style.left = offset * countOffset + "rem";
+                }
+            }
+        });
+
+        let nextBttn = document.createElement("img");
+        nextBttn.classList.add("button");
+        nextBttn.classList.add("next__img");
+        nextBttn.src = "/img/next.png";
+        if(containerslider.children.length - 2 + countOffset <= count){
+            nextBttn.style.display = "none";
+        }
+
+        nextBttn.addEventListener("click", event => {
+            if(containerslider.children.length - 2 + countOffset > count + 1){
+                prevBttn.style.display = "block";
+            }
+            else{
+                nextBttn.style.display = "none";
+                prevBttn.style.display = "block";
+            }
+            if(containerslider.children.length - 2 + countOffset > count){
+                countOffset--;
+                for(let el of containerslider.children){
+                    if(el.classList.contains("button")){continue}
+                    el.style.left = offset * countOffset + "rem";
+                }
+            }
+        });
+
+        containerslider.append(prevBttn);
+        containerslider.append(nextBttn);
+
+        slider.append(containerslider);
+    }
+}

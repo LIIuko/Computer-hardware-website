@@ -47,13 +47,8 @@ img {
     padding: 1rem 0;
 }
 
-.price,
 .product__about {
     text-align: center;
-}
-
-.price {
-    margin: 1rem 0;
 }
 
 .card:hover .product__title {
@@ -66,7 +61,6 @@ img {
     margin: 5px 0;
     color: white;
 }
-
 
 .container__img{
     position: relative;
@@ -102,15 +96,6 @@ img {
     .container {
         max-width: none;
     }
-
-    .flex__container {
-        display: block;
-    }
-
-    .right {
-        width: 30%;
-        float: right;
-    }
 }
 
 @media (max-width:768px) {
@@ -119,6 +104,14 @@ img {
         padding: 0px 5px;
         margin: 10px 0;
     }
+    
+    .flex__container {
+        display: block;
+    }
+
+    .right{
+        padding: 0 2.5rem;
+    }
 }
 
 @media (max-width:400px) {
@@ -126,5 +119,9 @@ img {
         flex: 0 1 100%;
         padding: 0px 5px;
         margin: 10px 0;
+    }
+
+    .right{
+        padding: 0 1rem;
     }
 }

@@ -1,4 +1,5 @@
 import { create } from "./script.js";
+import { createSlider } from "./script.js";
 
 const product = {
     img: ["/img/ram.png", "/img/ram/ram2.png", "/img/ram/ram3.png", "/img/ram/ram4.png"],
@@ -12,4 +13,12 @@ for (let i = 0; i < 20; i++) {
     processors.push(product);
 }
 
-create(processors, productContainer);
+if(productContainer){
+    create(processors, productContainer);
+}
+
+const slider = document.querySelector(".slider");
+
+if(slider){
+    createSlider(product.img, slider);
+}

@@ -75,14 +75,16 @@ export function createImgBlock(el){
 }
 
 export function createSlider(imgs, slider){
-    const mainSlide = document.querySelector(".main__slide");
-    let count = window.innerWidth > 1300 ? 5: 4;
-    let countOffset = 0;
-    let offset = window.innerWidth > 1300 ? 5.5: 5.4;
-    offset = window.innerWidth > 992 ? offset: 4.5;
     if(window.innerWidth > 768){
+        let count = window.innerWidth > 1300 ? 5: 4;
+        let countOffset = 0;
+        let offset = window.innerWidth > 1300 ? 5.5: 5.4;
+        offset = window.innerWidth > 992 ? offset: 4.5;
         let containerslider = document.createElement("div");
         containerslider.classList.add("container__slider");
+        const mainSlide = document.createElement("img");
+        mainSlide.classList.add("main__slide");
+        mainSlide.src = imgs[0];
 
         for(let img of imgs){
             let slide = document.createElement("img");
@@ -107,19 +109,19 @@ export function createSlider(imgs, slider){
         prevBttn.classList.add("button");
         prevBttn.classList.add("prev__img");
         prevBttn.src = "/img/next.png";
-        if(containerslider.children.length - 2 - countOffset <= count * 2){
+        if(countOffset <= 0){
             prevBttn.style.display = "none";
         }
 
         prevBttn.addEventListener("click", event => {
-            if(containerslider.children.length - 2 - countOffset > count * 2 + 1){
+            if(countOffset < -1){
                 nextBttn.style.display = "block";
             }
             else{
                 nextBttn.style.display = "block";
                 prevBttn.style.display = "none";
             }
-            if(containerslider.children.length - 2 - countOffset > count * 2){
+            if(containerslider.children.length - 3 - countOffset > count){
                 nextBttn.style.display = "block";
                 countOffset++;
                 for(let el of containerslider.children){
@@ -146,6 +148,7 @@ export function createSlider(imgs, slider){
                 prevBttn.style.display = "block";
             }
             if(containerslider.children.length - 2 + countOffset > count){
+                prevBttn.style.display = "block";
                 countOffset--;
                 for(let el of containerslider.children){
                     if(el.classList.contains("button")){continue}
@@ -158,5 +161,67 @@ export function createSlider(imgs, slider){
         containerslider.append(nextBttn);
 
         slider.append(containerslider);
+        slider.prepend(mainSlide);
+    }
+    else{
+        let countOffset = 0;
+        for(let img of imgs){
+            let slide = document.createElement("img");
+            slide.classList.add("slide");
+            slide.src = img;
+            slider.append(slide);
+        }
+        for(let img of imgs){
+            let slide = document.createElement("img");
+            slide.classList.add("slide");
+            slide.src = img;
+            slider.append(slide);
+        }
+        let prevBttn = document.createElement("img");
+        prevBttn.classList.add("button");
+        prevBttn.classList.add("prev__img");
+        prevBttn.src = "/img/next.png";
+        if(countOffset <= 0){
+            prevBttn.style.display = "none";
+        }
+
+        prevBttn.addEventListener("click", event => {
+            if(countOffset > -2){
+                prevBttn.style.display = "none";
+            }
+            if(slider.children.length - 2 > countOffset){
+                nextBttn.style.display = "block";
+                countOffset++;
+                for(let el of slider.children){
+                    if(el.classList.contains("button")){continue}
+                    el.style.left = 100 * countOffset + "%";
+                }
+            }
+        });
+
+        let nextBttn = document.createElement("img");
+        nextBttn.classList.add("button");
+        nextBttn.classList.add("next__img");
+        nextBttn.src = "/img/next.png";
+        if(slider.children.length - 2 <= countOffset){
+            nextBttn.style.display = "none";
+        }
+
+        nextBttn.addEventListener("click", event => {
+            if(slider.children.length - 4 + countOffset == 0){
+                nextBttn.style.display = "none";
+            }
+            if(slider.children.length - 2 + countOffset > 0){
+                prevBttn.style.display = "block";
+                countOffset--;
+                for(let el of slider.children){
+                    if(el.classList.contains("button")){continue}
+                    el.style.left = 100 * countOffset + "%";
+                }
+            }
+        });
+
+        slider.append(prevBttn);
+        slider.append(nextBttn);
     }
 }

@@ -73,6 +73,10 @@
     padding: 0.5rem;
 }
 
+p{
+    font-size: 1.2rem;
+}
+
 @media (max-width:1300px) {
     .container {
         max-width: 1000px;

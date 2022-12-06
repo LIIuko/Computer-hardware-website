@@ -108,7 +108,7 @@ export function createSlider(imgs, slider){
         let prevBttn = document.createElement("img");
         prevBttn.classList.add("button");
         prevBttn.classList.add("prev__img");
-        prevBttn.src = "/img/next.png";
+        prevBttn.src = "../img/next.png";
         if(countOffset <= 0){
             prevBttn.style.display = "none";
         }
@@ -134,7 +134,7 @@ export function createSlider(imgs, slider){
         let nextBttn = document.createElement("img");
         nextBttn.classList.add("button");
         nextBttn.classList.add("next__img");
-        nextBttn.src = "/img/next.png";
+        nextBttn.src = "../img/next.png";
         if(containerslider.children.length - 2 + countOffset <= count){
             nextBttn.style.display = "none";
         }
@@ -180,7 +180,7 @@ export function createSlider(imgs, slider){
         let prevBttn = document.createElement("img");
         prevBttn.classList.add("button");
         prevBttn.classList.add("prev__img");
-        prevBttn.src = "/img/next.png";
+        prevBttn.src = "../img/next.png";
         if(countOffset <= 0){
             prevBttn.style.display = "none";
         }
@@ -202,7 +202,7 @@ export function createSlider(imgs, slider){
         let nextBttn = document.createElement("img");
         nextBttn.classList.add("button");
         nextBttn.classList.add("next__img");
-        nextBttn.src = "/img/next.png";
+        nextBttn.src = "../img/next.png";
         if(slider.children.length - 2 <= countOffset){
             nextBttn.style.display = "none";
         }

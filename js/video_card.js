@@ -3,9 +3,9 @@ import { createSlider } from "./script.js";
 
 
 const product = {
-    img: ["/img/video_card.png", "/img/video_card/video_card2.png", "/img/video_card/video_card3.png", "/img/video_card/video_card4.png"],
+    img: ["../img/video_card.png", "../img/video_card/video_card2.png", "../img/video_card/video_card3.png", "../img/video_card/video_card4.png"],
     title: "Title",
-    about: "/pages/about_video_card.html",
+    about: "../pages/about_video_card.html",
 };
 const productContainer = document.querySelector(".product__container");
 

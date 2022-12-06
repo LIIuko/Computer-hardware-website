@@ -2,9 +2,9 @@ import { create } from "./script.js";
 import { createSlider } from "./script.js";
 
 const product = {
-    img: ["/img/hdd.png", "/img/hdd/hdd2.png", "/img/hdd/hdd3.png", "/img/hdd/hdd4.png"],
+    img: ["../img/hdd.png", "../img/hdd/hdd2.png", "../img/hdd/hdd3.png", "../img/hdd/hdd4.png"],
     title: "Title",
-    about: "/pages/about_hdd.html",
+    about: "../pages/about_hdd.html",
 };
 const productContainer = document.querySelector(".product__container");
 

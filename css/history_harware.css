@@ -1,0 +1,141 @@
+.history{
+    position: relative;
+    margin: 2rem -1rem;
+}
+.history::before{
+    content: '';
+    position: absolute;
+    width: 0.4rem;
+    height: 100%;
+    top: 0;
+    left: calc(50% - 0.2rem);
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 0.1rem;
+}
+.history li{
+    display: flex;
+    position: relative;
+    padding: 0 1rem;
+}
+.left{
+    justify-content: start;
+}
+.right {
+    justify-content: end;
+}
+.block {
+    width: 48%;
+    position: relative;
+}
+.block__move{
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.left .block .block__move{
+    transition: all 2s;
+    transform: translateX(-100%);
+}
+.right .block .block__move{
+    transition: all 2s;
+    transform: translateX(100%);
+}
+.right .block .active,
+.left .block .active{
+    transition: all 2s;
+    transform: translateX(0);
+}
+.block::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 1rem;
+    background-color: yellow;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left .block::before{
+    right: -2.2rem;
+}
+.right .block::before {
+    left: -2.2rem;
+}
+
+.block__name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem -0.4rem;
+}
+.block__data {
+    font-size: 2rem;
+    padding: 0 0.4rem;
+}
+.block__title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 0.4rem;
+    color: yellow;
+}
+.block__descriprion {
+    line-height: 1.5rem;
+}
+@media (max-width:1300px){
+    .container {
+        max-width: 1000px;
+    }
+    .block__name{
+        flex-direction: column-reverse;
+    }
+    .block__title{
+        margin: 0.5rem 0;
+    }
+    .left .block::before{
+        right: -2rem;
+    }
+    .right .block::before {
+        left: -2rem;
+    }
+}
+@media (max-width:992px){
+    .container {
+        max-width: 1024px;
+    }
+    .left .block::before{
+        right: -2rem;
+    }
+    .right .block::before {
+        left: -2rem;
+    }
+}
+@media (max-width:767px){
+    .container {
+        max-width: none;
+    }
+    .block{
+        margin: 1rem;
+        width: 100%;
+    }
+    .left .block::before{
+        right: calc(50% - 0.75rem);
+    }
+    .right .block::before {
+        left: calc(50% - 0.75rem);
+    }
+    .block::before{
+        top: -0.75rem;
+    }
+    .history{
+        margin: 0rem -1rem;
+    }
+    .first{
+        margin-top: 0;
+    }
+    .last{
+        margin-bottom: 0;
+    }
+}
